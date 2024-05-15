@@ -3,12 +3,15 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
 
       colors: {
         primary: "#1182c5",
         secondary: "#2aa6df",
+        dark: "#1e1e1e",
+        light: "#f5f5f5",
       },
 
       container:{
