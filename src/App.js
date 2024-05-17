@@ -2,6 +2,8 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero'
 import BestBooks from './components/BestBooks/BestBooks'
+import Banner from './components/Banner/Banner';
+import AppStoreBanner from './components/AppStoreBanner/AppStoreBanner';
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <Navbar/>
         <Hero/>
         <BestBooks/>
+        <Banner/>
+        <AppStoreBanner/>
       </div>
     </>
   );
