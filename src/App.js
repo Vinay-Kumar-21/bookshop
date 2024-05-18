@@ -4,6 +4,8 @@ import Hero from './components/Hero/Hero'
 import BestBooks from './components/BestBooks/BestBooks'
 import Banner from './components/Banner/Banner';
 import AppStoreBanner from './components/AppStoreBanner/AppStoreBanner';
+import AllBooks from './components/AllBooks/AllBooks';
+import Testimonial from './components/Testimonial/Testimonial';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <BestBooks/>
         <Banner/>
         <AppStoreBanner/>
+        <AllBooks/>
+        <Testimonial/>
       </div>
     </>
   );
