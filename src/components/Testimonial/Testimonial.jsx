@@ -9,13 +9,13 @@ const TestimonialData=[
         img: "https://picsum.photos/101/101",
       },
       {
-        id: 1,
+        id: 2,
         name: "Satya Narayan",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
         img: "https://picsum.photos/102/102",
       },
       {
-        id: 1,
+        id: 3,
         name: "Sachin Tendulkar",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
         img: "https://picsum.photos/103/103",
@@ -67,7 +67,7 @@ function Testimonial() {
     <>
     <div className='pb-10'>
         <div className="container">
-        <div className='text-center mb-20 max-w-[400px] mx-auto'>
+        <div data-aos="slide-up" className='text-center mb-20 max-w-[400px] mx-auto'>
                 <p
                 className='text-sm bg-clip-text
                 text-transparent bg-gradient-to-r
@@ -79,7 +79,7 @@ function Testimonial() {
             </div>
 
             {/* card sec */}
-            <div>
+            <div data-aos="zoom-in">
                 <Slider {...settings}>
                     {
                         TestimonialData.map((data)=>(

@@ -18,8 +18,8 @@ function AppStoreBanner() {
     text-white py-10' style={bannerImg}>
       <div className="container">
         <div className='space-y-6 max-w-xl mx-auto'>
-            <h1 className='text-2xl text-center sm:text-4xl font-semibold'>Read Books at your fingertips</h1>
-            <div className='flex flex-wrap justify-center items-center gap-4'>
+            <h1 data-aos="slide-up" className='text-2xl text-center sm:text-4xl font-semibold'>Read Books at your fingertips</h1>
+            <div data-aos="slide-up" className='flex flex-wrap justify-center items-center gap-4'>
                 <a href='#'>
                     <img src={PlayStoreImg} alt=''
                     className='max-w-[150px] sm:max-w-[120px] md:max-w-[200px]'/>
