@@ -32,7 +32,7 @@ const DropdownLinks=[
     }
 ];
 
-function Navbar() {
+function Navbar({handleOrderPopup}) {
   return (
     <div className='shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200'>
       <div className="container py-3 sm:-y-0">
@@ -79,7 +79,8 @@ function Navbar() {
                         </div>
                     </li>
                 </ul>
-                <button className='bg-gradient-to-r from-primary to-secondary
+                <button onClick={handleOrderPopup} 
+                className='bg-gradient-to-r from-primary to-secondary
                 text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300'>Order
                     <FaCartShopping className='text-xl text-white drop-shadow-sm cursor-pointer'/>
                 </button>

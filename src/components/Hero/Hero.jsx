@@ -4,7 +4,7 @@ import Book2 from "../../assets/books/book1.jpg"
 import Book3 from "../../assets/books/book3.jpg"
 import Vector from "../../assets/website/blue-pattern.png"
 
-function Hero() {
+function Hero({handleOrderPopup}) {
     const[imageId,setImageId]=useState(Book1);
     const[title,setTitle]=useState("His Life will forever be changed");
     const [description,setDescription]=useState("Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, maiores.")
@@ -62,7 +62,8 @@ function Hero() {
                             <button  data-aos="zoom-in" className='bg-gradient-to-r
                             from-primary to-secondary
                             text-white px-4 py-2 rounded-full
-                            mt-4 hover:scale-105 duration-200'>Order Now</button>
+                            mt-4 hover:scale-105 duration-200'
+                            onClick={handleOrderPopup}>Order Now</button>
                         </div>
                     </div>
                     <div className='min-h-[450px] flex
