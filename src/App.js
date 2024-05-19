@@ -1,17 +1,13 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero'
-import BestBooks from './components/BestBooks/BestBooks'
-import Banner from './components/Banner/Banner';
-import AppStoreBanner from './components/AppStoreBanner/AppStoreBanner';
-import AllBooks from './components/AllBooks/AllBooks';
-import Testimonial from './components/Testimonial/Testimonial';
-import Footer from './components/Footer/Footer';
-
+import Home from "./components/Home/Home"
+import Authors from './components/Authors/Authors';
+import BestBooks from './components/BestBooks/BestBooks';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect, useState } from 'react';
 import Popup from './components/Popup/Popup';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -29,21 +25,20 @@ function App() {
     })
     AOS.refresh();
   },[])
-  return (
-   <>
-      <div className='bg-white dark:bg-gray-900 dark:text-white duration-200'>
-        <Navbar handleOrderPopup={handleOrderPopup}/>
-        <Hero handleOrderPopup={handleOrderPopup}/>
-        <BestBooks handleOrderPopup={handleOrderPopup}/>
-        <Banner/>
-        <AppStoreBanner/>
-        <AllBooks/>
-        <Testimonial/>
-        <Footer/>
-        <Popup handleOrderPopup={handleOrderPopup} orderPopup={orderPopup}/>
-      </div>
-    </>
-  );
+
+  return(
+    <BrowserRouter>
+      <Navbar handleOrderPopup={handleOrderPopup}/>
+      <Popup handleOrderPopup={handleOrderPopup} orderPopup={orderPopup}/>
+      <Routes>
+        <Route path='/' element={<Home handleOrderPopup={handleOrderPopup}/>}>
+          </Route> 
+
+          <Route path='/bestbooks' element={<BestBooks/>}></Route>
+          <Route path='/authors' element={<Authors/>}></Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;

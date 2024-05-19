@@ -28,17 +28,17 @@ const BooksData = [
       },
       {
         id: 4,
-        img: Book2,
-        title: "His Life",
+        img: 'https://tse4.mm.bing.net/th?id=OIP.W7L7ljuftx02UWbbd3RoHAHaHa&pid=Api&P=0&h=180',
+        title: "Believe in Yourself",
         rating: 4.4,
-        author: "Someone",
+        author: "Joseph Murphy",
       },
       {
         id: 5,
-        img: Book1,
-        title: "Who's There",
+        img: 'https://th.bing.com/th/id/OIP.y6Qzu_SIv6JuZz1UGksx3gHaIk?w=164&h=190&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+        title: "Atomic Habits",
         rating: 4.5,
-        author: "Someone",
+        author: "James Clear",
       },
   ];
 function AllBooks() {

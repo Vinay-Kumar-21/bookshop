@@ -3,12 +3,13 @@ import Logo from "../../assets/website/logo.png"
 import { FaCaretDown } from 'react-icons/fa'
 import { FaCartShopping } from 'react-icons/fa6';
 import DarkMode from './DarkMode';
+import { Link } from 'react-router-dom';
 
 const Menu=[
     {
         id:1,
         name:"Home",
-        link:"/#"
+        link:"/"
     },
     {
         id:2,
@@ -20,11 +21,11 @@ const Menu=[
 const DropdownLinks=[
     {
         name:"Best Books",
-        link:"/#"
+        link:"/bestbooks"
     },
     {
         name:"Authors",
-        link:"/#",
+        link:"/authors",
     },
     {
         name:"Rental Books",
@@ -67,12 +68,12 @@ function Navbar({handleOrderPopup}) {
                             <ul className="space-y-3">
                                 {DropdownLinks.map((data) => (
                                     <li key={data.name}>
-                                        <a
+                                        <Link
                                             className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
-                                            href={data.link}
+                                            to={data.link}
                                         >
                                             {data.name}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
